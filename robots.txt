@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://soocer-position.netlify.app/simtempa.xml
