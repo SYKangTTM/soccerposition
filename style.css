@@ -284,17 +284,19 @@ body {
 
 .Forward-position-title {
     color: #3ba363;
+    font-size: 2rem;
 }
 .Forward-position-celeb {
     color: #3ba363;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .Midfielder-position-title {
     color: #3ba363;
+    font-size: 2rem;
 }
 .Midfielder-position-celeb {
     color: #3ba363;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .Defender-position-title {
     color: #3ba363;
