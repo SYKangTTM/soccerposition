@@ -218,6 +218,16 @@ body {
   height: 2.7rem;
 }
 
+.position-explain {
+    font-size: 1.5rem;
+}
+.position-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+
+
 .Forward-box {
   position: absolute;
   top: 0;
@@ -288,17 +298,10 @@ body {
 }
 .Defender-position-title {
     color: #3ba363;
+    font-size: 2rem;
 }
 .Defender-position-celeb {
     color: #3ba363;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-.position-explain {
-    font-size: 1.5rem;
-}
-.position-label {
-    width: 20%;
-    text-align: left;
-    height: 2rem;
-}
