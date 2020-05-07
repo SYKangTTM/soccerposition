@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
     <title>축구포지션 테스트</title>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb2b4b1427e751e"></script>
@@ -23,12 +23,10 @@
     <meta property="og:url" content="https://soocer-position.netlify.app" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="축구포지션 테스트" />
-    <meta property="og:description" content="얼굴로 보는 인공지능 축구포지션 테스트, 나의 축구포지션을 찾아보세요. 각포지션별 월드스타 사진 데이터로 학습한 인공지는이 나의 얼궁을 보고 잠재되어 있는 나의 포지션을 찾아 드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다."
-    />
+    <meta property="og:description" content="얼굴로 보는 인공지능 축구포지션 테스트, 나의 축구포지션을 찾아보세요. 각포지션별 월드스타 사진 데이터로 학습한 인공지는이 나의 얼궁을 보고 잠재되어 있는 나의 포지션을 찾아 드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다." />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-    
-    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -97,7 +95,14 @@
             </div>
         </div>
     </div>
-    <!-- 여기에 배너가있음 -->
+    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-1h7lwo4pz5i05" data-ad-width="320" data-ad-height="100"></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+    <footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; 달나라 To The Moon 2020. All Rights Reserved. </p>
+        </div>
+    </footer>
 
     <div id="webcam-container"></div>
 
@@ -194,7 +199,7 @@
                 var element = document.createElement("div")
                 element.classList.add("d-flex");
                 labelContainer.appendChild(element);
-            } 
+            }
             // for (let i = 0; i < maxPredictions; i++) { // and class labels
             //     labelContainer.appendChild(document.createElement("div"));
             // }
@@ -233,7 +238,6 @@
             var title = "<div class='" + prediction[0].className + "-position-title'>" + resultTitle + "</div>"
             var explain = "<div class='position-explain pt-2'>" + resultExplain + "</div>"
             var celeb = "<div class='" + prediction[0].className + "-position-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
-            
             $('.result-message').html(title + explain + celeb);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
