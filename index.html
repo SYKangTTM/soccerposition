@@ -42,9 +42,7 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active" onclick="gtag('event', '개발자 블로그 클릭', {'event_category': '개발자 블로그 클릭','event_label': '상단 메뉴'});">
-                    <a class="nav-link" id="yotube-top-link" href="https://blog.naver.com/kkseyj">블로그</a>
-                </li>
+                <!-- 추가메뉴추가 -->
             </ul>
         </div>
     </nav>
@@ -57,12 +55,7 @@
         <p class="sr-only">얼굴로 보는 인공지능 포지션 테스트, 나의 얼굴로 포지션을 찾아보세요! 각 포지션별 대표 축구선수로 학습한 인공지능이 나의 얼굴을 보고 숨겨진 나의 포지션을 찾아 줍니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다.</p>
     </section>
 
-    <section class="blog pb-3" id="blog-mid-link">
-        <div class="container mt-3 blog-cover d-flex flex-row-reverse align-items-center" onclick="gtag('event', '개발자 블로그 클릭', {'event_category': '개발자 블로그 클릭','event_label': '화면 중간'});">
-            <img src="img/Naver_Blog_Img.png" alt="blog-icon" class="blog-icon" style="width: 6%">
-            <a href="https://blog.naver.com/kkseyj" class="blog-link">by SYKang</a>
-        </div>
-    </section>
+   
 
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="container file-upload">
@@ -88,7 +81,7 @@
             <div class="addthis_inline_share_toolbox"></div>
 
             <div class="pt-3 image-title-wrap">
-                <button type="button p-2" class="try-again-btn" onclick="gaReload1()" data-toggle="modal" data-target="#adModal">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
                     <span class="try-again-text">다른 사진으로 재시도</span>
                 </button>
             </div>
