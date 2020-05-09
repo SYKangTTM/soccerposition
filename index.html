@@ -28,8 +28,6 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.js.min"></script>
 </head>
 
-
-
 <body>
     <nav class="p-3 container navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">축구포지션 테스트</a>
@@ -76,13 +74,11 @@
             </div>
             <p class="result-message"></p>
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
-    
-            <div>
-                <a id="kakao-link-btn" href="javascript:sendLink()"> <img src="img/KakaoShare.png" ></a>
 
-            </div>
+            <a id="kakao-link-btn" href="javascript:sendLink()">
+                <img src="img/KakaoShare.png">
+            </a>
 
-            
             <div class="pt-3 image-title-wrap">
                 <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
                     <span class="try-again-text">다른 사진으로 재시도</span>
@@ -104,26 +100,26 @@
     <div id="webcam-container"></div>
 
     <div id="disqus_thread"></div>
-    
-    <script>
-    Kakao.init('14c6553a99aeb987b0a39c61192a7a85');
-    function sendLink() {
-        Kakao.Link.sendTalkLink({
-            label: '[##_page_title_##]',
-            image: {
-                src: firstImgSrc,
-                width: '300',
-                height: parseInt(300 * firstImgRatio)
-            },
-            webButton: {
-                text: '테스트하러 가기',
-                url: 'https://soccer-position.netlify.app'
-            }
-        });
-    }
-</script>
-    
-    
+
+    <script type='text/javascript'>
+        Kakao.init('14c6553a99aeb987b0a39c61192a7a85');
+
+        function sendLink() {
+            Kakao.Link.sendTalkLink({
+                label: '[##_page_title_##]',
+                image: {
+                    src: firstImgSrc,
+                    width: '300',
+                    height: parseInt(300 * firstImgRatio)
+                },
+                webButton: {
+                    text: '테스트하러가기',
+                    url: 'https://soccer-position.netlify.app'
+                }
+            });
+        }
+    </script>
+
     <script>
         /**
          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
