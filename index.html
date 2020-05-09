@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>축구포지션 테스트</title>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb2b4b1427e751e"></script>
+
     <meta name="title" content="축구포지션 테스트">
     <meta name="subject" content="얼굴로 보는 인공지능 축구포지션 테스트, 몰랐던 나의 축구포지션을 찾아 보세요!">
     <meta name="keywords" content="축구포지션 테스트, 인공지능 축구포지션 테스트, 축구포지션, 포지션 테스트, 나의 포지션, 포지션 찾기, 얼굴로 보는 포지션, 축구, 얼굴포지션, soccerpostion, footballposition, AI포지션, AI축구포지션, 축구, 인공지능">
@@ -26,7 +25,10 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+    <script src="https://developers.kakao.com/sdk/js/kakao.js.min"></script>
 </head>
+
+
 
 <body>
     <nav class="p-3 container navbar navbar-expand-lg navbar-light">
@@ -55,8 +57,6 @@
         <p class="sr-only">얼굴로 보는 인공지능 포지션 테스트, 나의 얼굴로 포지션을 찾아보세요! 각 포지션별 대표 축구선수로 학습한 인공지능이 나의 얼굴을 보고 숨겨진 나의 포지션을 찾아 줍니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다.</p>
     </section>
 
-   
-
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="container file-upload">
         <div class="image-upload-wrap" style="width: 80%; margin:0 auto">
@@ -76,10 +76,13 @@
             </div>
             <p class="result-message"></p>
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+    
+            <div>
+                <a id="kakao-link-btn" href="javascript:sendLink()"> <img src="img/KakaoShare.png" ></a>
 
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div class="addthis_inline_share_toolbox"></div>
+            </div>
 
+            
             <div class="pt-3 image-title-wrap">
                 <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
                     <span class="try-again-text">다른 사진으로 재시도</span>
@@ -101,6 +104,26 @@
     <div id="webcam-container"></div>
 
     <div id="disqus_thread"></div>
+    
+    <script>
+    Kakao.init('14c6553a99aeb987b0a39c61192a7a85');
+    function sendLink() {
+        Kakao.Link.sendTalkLink({
+            label: '[##_page_title_##]',
+            image: {
+                src: firstImgSrc,
+                width: '300',
+                height: parseInt(300 * firstImgRatio)
+            },
+            webButton: {
+                text: '테스트하러 가기',
+                url: 'https://soccer-position.netlify.app'
+            }
+        });
+    }
+</script>
+    
+    
     <script>
         /**
          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
