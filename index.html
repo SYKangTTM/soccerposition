@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>축구포지션 테스트</title>
+    <title>인공지능 축구포지션 테스트</title>
 
     <meta name="title" content="축구포지션 테스트">
     <meta name="subject" content="얼굴로 보는 인공지능 축구포지션 테스트, 몰랐던 나의 축구포지션을 찾아 보세요!">
@@ -42,7 +42,10 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <!-- 추가메뉴추가 -->
+                <li class="nav-item active" onclick="gtag('event', '개발자 블로그 클릭', {'event_category': '개발자 블로그 클릭','event_label': '상단 메뉴'});">
+                    <a class="nav-link" id="yotube-top-link" href="https://blog.naver.com/kkseyj">개발자 블로그</a>
+                </li>
+                
             </ul>
         </div>
     </nav>
@@ -54,7 +57,14 @@
         <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine을 활용하였습니다.</h4>
         <p class="sr-only">얼굴로 보는 인공지능 포지션 테스트, 나의 얼굴로 포지션을 찾아보세요! 각 포지션별 대표 축구선수로 학습한 인공지능이 나의 얼굴을 보고 숨겨진 나의 포지션을 찾아 줍니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다.</p>
     </section>
-
+    
+    <section class="blog pb-3" id="blog-mid-link">
+        <div class="container mt-3 blog-cover d-flex flex-row-reverse align-items-center" onclick="gtag('event', '개발자 블로그 클릭', {'event_category': '개발자 블로그 클릭','event_label': '화면 중간'});">
+            <img src="img/Naver_Blog_Img.png" alt="blog-icon" class="blog-icon" style="width: 5%">
+            <a href="https://blog.naver.com/kkseyj" class="blog-link">by 달나라</a>
+        </div>
+    </section>
+    
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="container file-upload">
         <div class="image-upload-wrap" style="width: 80%; margin:0 auto">
@@ -245,6 +255,7 @@
             var celeb = "<div class='" + prediction[0].className + "-position-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             $('.result-message').html(title + explain + celeb);
             var barWidth;
+            
             for (let i = 0; i < maxPredictions; i++) {
                 if (prediction[i].probability.toFixed(2) > 0.1) {
                     barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
@@ -271,13 +282,10 @@
                 var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
                 labelContainer.childNodes[i].innerHTML = label + bar;
             }
-        }
-        //     for (let i = 0; i < maxPredictions; i++) {
-        //         const classPrediction =
-        //             prediction[i].className + ": " + prediction[i].probability.toFixed(2) * 100 + "%";
-        //         labelContainer.childNodes[i].innerHTML = classPrediction;
-        //     }
-        // }
+            
+            
+       
+
     </script>
 
 </body>
